@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "DM Sans", serif;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;  /*overflow x is used to control horizontal overflow nd overflow y is used to control vertical overflow */
+}
+
+.page1 {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: #6d6d6d5a;
+}
+
+nav {
+    padding: 2vw 3vw;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-part2{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+.nav-part2 h4{
+    padding: 10px 15px;
+    border: 1px solid rgba(0, 0, 0, 0.495);
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    color: rgba(0, 0, 0, 0.623);
+}
+.nav-part2 h4::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: all ease 0.3s;
+}
+.nav-part2 h4:hover::after{
+    bottom: 0;
+    border-radius: 0;
+}
+.nav-part2 h4 a{
+    color: rgb(22, 21, 21);
+    text-decoration: none;
+    z-index: 9;
+    position: relative;
+}
+.nav-part2 h4:hover a{
+    color: white;
+}
+.center{
+    width: 100%;
+    height: 65vh;
+    padding: 3vw 3vw;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    
+}
+
+.left h3{
+    width: 40vw;
+}
+.right h1{
+    text-align: right;
+    font-size: 8vw;
+    line-height: 7vw;
+}
+.page1 video{
+    border-radius:15px;
+    width: 95vw;
+    position: relative;
+    left: 2.2vw;
+    
+}
+.o-ball1{
+    position: absolute;
+    background-color: #fe320a;
+    height: 30vw;
+    width: 30vw;
+    right: 3vw;
+    top: 70vh;
+    border-radius: 50%;
+    filter: blur(30px);
+    animation-name: motion;
+    animation-duration: 3.5s;
+    animation-timing-function: ease-in-ease-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.o-ball2{
+    position: absolute;
+    background-color: #fe320a;
+    height: 30vw;
+    width: 30vw;
+    right: -10vw;
+    top: 65vh;
+    border-radius: 50%;
+    filter: blur(30px);
+    animation-name: motion;
+    animation-duration: 3.5s;
+    animation-timing-function: ease-in-ease-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+@keyframes motion{
+    from{
+        transform: skew(20deg);
+    }
+    to{
+        transform: scaleY(2px)  skew(-20deg);
+
+    }
+}
+.page2{
+    background-color: #6d6d6d5a;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+.moving-text h1{
+    font-size: 8vw;
+    
+}
+.gola{
+    display: flex;
+    align-self: center;
+    height: 3.5vw;
+    width: 3.5vw;
+    border-radius: 50%;
+    background-color: #fe320a;
+}
+.moving-text{
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    overflow-x: auto; /*for scrollbar*/
+}
+
+/*to remove scrollbar*/
+.moving-text::-webkit-scrollbar{
+    display: none;
+}
+.con{
+    display: flex;
+    animation-name: move;
+    animation-timing-function: linear;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    
+}
+.con h1,.gola{
+    margin: 1.5vw 0.5vw;
+}
+@keyframes move{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+.page2-b{
+    position: relative;
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    
+}
+.b-left h1{
+    position: relative;
+    z-index: 10;
+    font-size: 4vw;
+    line-height: 4vw;
+}
+.b-left{
+    width: 70vw;
+    padding-left: 4vw;
+    text-align: left;
+    padding-right: 18vw;
+}
+.b-right p{
+    font-size: 0.95vw;
+    font-weight: 500;
+}
+.b-right{
+    width: 30vw;
+    padding: 5.5vw;
+}
+.b-right img{
+    height: 13vw;
+    width: 18vw;
+    border-radius: 15px;
+    margin-bottom: 1.2vw;
+    
+}
+.b-gola{
+    position: absolute;
+    background-color: #fe320a;
+    height: 25vw;
+    width: 25vw;
+    z-index: 8;
+    border-radius: 50%;
+    filter: blur(15px);
+    left: 20vw;
+    animation-name: b-motion;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-ease-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    top: 20vw;
+    
+
+}
+@keyframes b-motion{
+    from{
+
+        transform: translate(-10px,-10px) skewX(15deg);
+    }
+    to{
+        transform: translate(10px,10px) skewX(-15deg);
+    }
+}
+.page3{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #6d6d6d5a;
+    /* padding: 4vw 0; */
+    
+}
+.elem{
+    height: 128px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 0 2vw;
+    border-bottom: 1.5px solid black;
+}
+.elem h2{
+    font-size: 3vw;
+    position: relative;
+    z-index: 9;
+}
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(218, 142, 0);
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: all ease 0.2s;
+}
+.elem:hover .overlay{
+    top: 0;
+}
+.elem-container{
+    height: 100%;
+    width: 100%;
+}
+.fixed-img{
+    height: 50vh;
+    width: 23vw;
+    background-color: #fe320a;
+    border-radius: 12px;
+    position: fixed;
+    left: 50%;
+    top: 30%;
+    z-index: 99;
+    display: none;
+}
