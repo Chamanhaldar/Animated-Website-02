@@ -242,7 +242,7 @@ nav {
 .page3{
     min-height: 100vh;
     width: 100%;
-    background-color: #6d6d6d5a;
+    background-color: #efeae3;
     /* padding: 4vw 0; */
     
 }
@@ -274,17 +274,28 @@ nav {
     top: 0;
 }
 .elem-container{
-    height: 100%;
+    height: 100vh;
     width: 100%;
 }
 .fixed-img{
     height: 50vh;
     width: 23vw;
-    background-color: #fe320a;
     border-radius: 12px;
     position: fixed;
     left: 50%;
     top: 30%;
     z-index: 99;
     display: none;
+    background-size: cover;
+    background-position: center;
+}
+.page4{
+    height: 60vh;
+    width: 100%;
+    background-color: #efeae3;
+}
+.page5{
+    height: 100vh;
+    width: 100%;
+    /* background-color: #efeae3; */
 }
